@@ -1,0 +1,10 @@
+<h3>Your added artists:</h3>
+<ol>
+  @foreach (var cd in @Model["cds"])
+  {
+    <li>@cd.GetAlbumName()</li>
+    <li>@cd.GetYear()</li>
+  }
+</ol>
+<p><a href='/artists/@Model["artist"].GetId()/cds/new'>Add a new CD</a></p>
+<p><a href='/'>Return to Main Page</a></p>
